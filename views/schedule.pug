@@ -1,0 +1,36 @@
+extends layout
+
+block append scripts
+     script(src='/public/javascripts/classes/schedule.js')
+     script(src="https://unpkg.com/react@17/umd/react.development.js" crossorigin)
+     script(src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin)
+
+block content
+     #sideBar
+          button#btnLogOutSchedule Log Out  
+          a#scheduleLink(href = "/schedule/", class = "sideBarLink") Schedule
+          a#projectListLink(href = "/project/", class = "sideBarLink") Project And Task List
+     #schedule
+          //canvas(id="schedule-canvas")
+          #updateTask(class="modal")
+               h2 Update Task
+               span(class= 'modalClose') X
+               fieldset
+                    input#changeTaskName(type='text', placeholder='New Task Name')
+                    input#changeTaskDeadline(class= 'dateSelector', type='text', placeholder='New Task Deadline')
+                    button#btnUpdateTask Update Task
+          #updateProjectTask(class="modal")
+               h2 Update Project Task
+               span(class= 'modalClose') X
+               fieldset
+                    input#changeProjectTaskName(type='text', placeholder='New Project Task Name')
+                    input#changeProjectTaskDeadline(class= 'dateSelector', type='text', placeholder='New Project Task Deadline')
+                    button#btnUpdateProjectTask Update Project Task
+          #scheduleTaskContainer
+               #day0(class='day')
+               #day1(class='day')
+               #day2(class='day')
+               #day3(class='day')
+               #day4(class='day')
+               #day5(class='day')
+               #day6(class='day')

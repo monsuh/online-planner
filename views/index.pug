@@ -1,0 +1,96 @@
+extends layout
+
+block content
+     #header
+          h1#dateHeading
+     #sideBar
+          button#btnLogOut Log Out  
+          a#scheduleLink(href = "/schedule/", class = "sideBarLink") Schedule
+          a#projectListLink(href = "/project/", class = "sideBarLink") Project And Task List
+     #wrapper
+          #addProject(class="modal")
+               h2 Add Project
+               span(class= 'modalClose') X
+               fieldset
+                    input#inputProjectName(type='text', placeholder='Project Name')
+                    input#inputProjectDeadline(type='date', placeholder='Project Deadline')
+                    button#btnAddProject Add Project
+          #addTask(class="modal")
+               h2 Add Task
+               span(class= 'modalClose') X
+               fieldset
+                    input#inputTaskName(type='text', placeholder='Task Name')
+                    input#inputTaskDeadline(type='date', placeholder='Task Deadline')
+                    button#btnAddTask Add Task
+          #addProjectTask(class="modal")
+               h2 Add Project Task
+               span(class= 'modalClose') X
+               fieldset
+                    input#inputProjectTaskName(type='text', placeholder='Project Task Name')
+                    input#inputProjectTaskDeadline(type='date', placeholder='Project Task Deadline')
+                    button#btnAddProjectTask Add Project Task
+          #addEvent(class="modal")
+               h2 Add Event
+               span(class= 'modalClose') X
+               fieldset
+                    input#inputEventName(type='text', placeholder='Event Name')
+                    input#inputEventDeadline(type='date', placeholder='Event Date')
+                    input#inputStartEventHours(class= "timeInput", type="text", placeholder='Start Event Hours')
+                    span(class= "timeInput") :
+                    input#inputStartEventMinutes(class= "timeInput", type="text", placeholder='Start Event Minutes')
+                    input#inputEndEventHours(class= "timeInput", type="text", placeholder='End Event Hours')
+                    span(class= "timeInput") :
+                    input#inputEndEventMinutes(class= "timeInput", type="text", placeholder='End Event Minutes')
+                    button#btnAddEvent Add Event
+          #updateProject(class="modal")
+               h2 Update Project
+               span(class= 'modalClose') X
+               fieldset
+                    input#changeProjectName(type='text', placeholder='New Project Name')
+                    input#changeProjectDeadline(type='date', placeholder='New Project Deadline')
+                    button#btnUpdateProject Update Project
+          #updateTask(class="modal")
+               h2 Update Task
+               span(class= 'modalClose') X
+               fieldset
+                    input#changeTaskName(type='text', placeholder='New Task Name')
+                    input#changeTaskDeadline(type='date', placeholder='New Task Deadline')
+                    button#btnUpdateTask Update Task
+          #updateProjectTask(class="modal")
+               h2 Update Project Task
+               span(class= 'modalClose') X
+               fieldset
+                    input#changeProjectTaskName(type='text', placeholder='New Project Task Name')
+                    input#changeProjectTaskDeadline(type='date', placeholder='New Project Task Deadline')
+                    button#btnUpdateProjectTask Update Project Task
+          #updateEvent(class="modal")
+               h2 Update Event
+               span(class= 'modalClose') X
+               fieldset
+                    input#changeEventName(type='text', placeholder='New Event Name')
+                    input#changeEventDeadline(type='date', placeholder='New Event Deadline')
+                    input#inputStartEventHours(class= "timeInput", type="text", placeholder='Start Event Hours')
+                    span(class= "timeInput") :
+                    input#inputStartEventMinutes(class= "timeInput", type="text", placeholder='Start Event Minutes')
+                    input#inputEndEventHours(class= "timeInput", type="text", placeholder='End Event Hours')
+                    span(class= "timeInput") :
+                    input#inputEndEventMinutes(class= "timeInput", type="text", placeholder='End Event Minutes')
+                    button#btnUpdateEvent Update Event
+          #projectList
+               h2 Upcoming
+               #links
+                    a#addProjectLink(href = "#") New Project
+                    a#addTaskLink(href = "#") New Task
+                    a#addEventLink(href = "#") New Event
+               #container
+          #recentlyCreatedList
+               h2 Recently Created
+               #container
+          #search(class="inputbars")
+               h2 Search
+               fieldset
+                    input#search(type='text', placeholder='Search')
+                    button#btnSearchName Search By Name
+                    button#btnSearchDate Search By Date
+          #searchResult
+

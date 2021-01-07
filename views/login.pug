@@ -1,0 +1,16 @@
+extends layout
+
+block content
+     #signInUser(class="inputbars")
+          h2 Sign In
+          fieldset
+               input#inputEmail(type="text", placeholder="Email")
+               input#inputPassword(type="text", placeholder="Password")
+               button#btnSignInUser Sign In
+     #newUser(class="inputbars")
+          h2 Register New User
+          fieldset
+               input#inputEmail(type="text", placeholder="Email")
+               input#inputPassword(type="text", placeholder="Password")
+               button#btnAddUser Add New User
+     p(style="margin-left:10px") Make sure to remember your password as there is no password recovery option.
