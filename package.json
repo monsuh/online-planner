@@ -1,13 +1,8 @@
 {
-  "name": "ExpressApp",
+  "name": "OnlinePlanner",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "scripts": {
-    "dev": "nodemon ./app.js",
-    "memory": "node --max-old-space-size=4096 ./app.js",
-    "start": "concurrently --kill-others \"npm run dev\" \"npm run memory\""
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
